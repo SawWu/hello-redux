@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import {createStore} from 'redux'
+import PropTypes from 'prop-types';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {'322323'}
+
       </div>
     );
   }
