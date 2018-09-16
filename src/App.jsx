@@ -2,13 +2,13 @@ import React, {Component} from 'react';
 import {Container, Button} from 'reactstrap';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import * as types from './actions';
+import {bindActionCreators} from 'redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {increment, decrement} from './actions';
 
 class App extends Component {
   render() {
     const {increment, decrement} = this.props;
-
     return (
       <div className="app" style={{margin: '100px auto 0'}}>
         <Container>
@@ -32,18 +32,13 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-    increment: (name) => {
-      dispatch(increment(name))
-    },
-    decrement: (name) => {
-      dispatch(decrement(name))
-    }
-  }
+  return bindActionCreators(types, dispatch);
 };
 
 App.propTypes = {
-  counter: PropTypes.number.isRequired
+  counter: PropTypes.number.isRequired,
+  increment: PropTypes.func.isRequired,
+  decrement: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
