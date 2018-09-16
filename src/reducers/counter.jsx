@@ -1,5 +1,5 @@
 const counter = (state = 1, action = {}) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'INCREMENT':
       return state + 1;
     case 'DECREMENT':
