@@ -19,7 +19,7 @@ const user = (state = initialState, action = {}) => {
         isFetching: true,
         error: null,
         user: {}
-      }
+      };
     case LOAD_USER_REJECTED:
       return {
         isFetching: false,
