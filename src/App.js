@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import * as types from './actions';
+import User from './components/User'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Button color="primary" onClick={() => increment()} style={{margin: '20px'}}>Increase</Button>
             <Button color="danger" onClick={() => decrement()} style={{margin: '20px'}}>Decrease</Button>
           </p>
+          <User/>
         </Container>
       </div>
     );
