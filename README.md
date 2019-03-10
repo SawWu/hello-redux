@@ -1,3 +1,3 @@
-# 
+# hello-redux
 
 redux-learn
