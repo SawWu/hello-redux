@@ -36,7 +36,6 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  console.log(dispatch)
   return {
     increment: () => {
       dispatch(increment())
