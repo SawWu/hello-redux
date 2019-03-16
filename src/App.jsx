@@ -8,10 +8,6 @@ class App extends Component {
     super(props)
   }
 
-  componentDidMount() {
-    console.log(this.props)
-  }
-
   render() {
     const {increment, decrement} = this.props;
     return (
